@@ -27,14 +27,15 @@ function main() {
     a = readLine().split(' ');
     a = a.map(Number);
     
-    console.log(shifty(n, k, a).join(' '));
+    // O(n)
+    console.log(a.concat(a.splice(0, k)).join(' '));
+    //console.log(shifty(n, k, a).join(' '));
 }
 
 // Brute force O(n^2)
-
-function shifty(n, d, arr) {
-    for (let i = 0; i < d; i++) {
-        arr.push(arr.shift());
-    }
-    return arr;
-}
+// function shifty(n, d, arr) {
+//     for (let i = 0; i < d; i++) {
+//         arr.push(arr.shift());
+//     }
+//     return arr;
+// }
